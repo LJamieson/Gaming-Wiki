@@ -3,12 +3,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-   categories = ['Genre', 'Platform', 'Publisher', 'Year', 'All']
+   categories = ['Genre', 'Platform', 'Publisher', 'Year', 'Games']
    return render_template('base.html', categories=categories)
 
-@app.route('/All')
+@app.route('/Games')
 def games():
-   entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)', 'Halo:_Combat_Evolved', 'Halo_2', 'Halo_3', 'Sonic_The_Hedgehog', 'Sonic_&_Knuckles'] 
+   entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)', 'Halo:_Combat_Evolved', 'Halo_2', 'Halo_3','Halo_Wars','Hearts_Of_Iron_IV','Pokemon_Blue','Pokemon_Emerald','Pokemon_Red','Stellaris', 'Sonic_The_Hedgehog', 'Sonic_&_Knuckles', 'Super_Mario_Bros.', 'Super_Mario_World','The_Elder_Scrolls_III:_Morrowind','The_Elder_Scrolls_V:_Skyrim','X-Com_UFO_Defencse','XCOM:_Enemy_Unknown'] 
+   currentdirect='/Games/'
+   return render_template('base.html', categories=entries, direct=currentdirect)
+
+@app.route('/Games/Alien:_Isolation')
+def alien():
+   game = 'Alien: Isolation'
+   details = []
+   dict_details = dict(genre="FPS", year="2012", pub="Sega", plat="Windows, PS3, Xbox360, Linux, MacOS")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
 
 @app.route('/Genre')
 def genre():
@@ -198,79 +209,79 @@ def platform():
 
 @app.route('/Platform/MS-DOS')
 def MSDOS():
-    entries = []
+    entries = ['Doom','Doom_2','X-Com:_UFO_Defence']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/NES')
 def NES():
-    entries =[]
+    entries =['Super_Mario_Bros.']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/SNES')
 def SNES():
-    entries = []
+    entries = ['Doom','Super_Mario_Bros.','Super_Mario_World']
     nextdirect ='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/MegaDrive')
 def Megadrive():
-    entries = []
+    entries = ['Sonic_The_Hedgehog','Sonic_&_Knuckles']
     nextdirect ='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/Windows')
 def Windows():
-    entries = []
+    entries = ['Alien:_Isolation','Doom','Doom_2','Doom_(2016)','Halo:_Combat_Evolved','Halo_2','Halo_Wars','Hearts_Of_Iron_IV','Stellaris','Sonic_The_Hedgehog','Sonic_&_Knuckles','The_Elder_Scrolls_III:_Morrowind','The_Elder_Scrolls_V:_Skyrim','X-Com:_UFO_Defence','XCOM:_Enemy_Unknown']
     nextdirect ='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/Linux')
 def Linux():
-    entries = []
+    entries = ['Alien:_Isolation','Hearts_Of_Iron_IV','Stellaris','XCOM:_Enemy_Unknown']
     nextdirect ='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/MacOS')
 def MacOS():
-    entries = []
+    entries = ['Alien:_Isolation','Doom_2','Halo:_Combat_Evolved','Hearts_Of_Iron_IV','Stellaris','XCOM:_Enemy_Unknown']
     nextdirect ='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/Xbox')
 def Xbox():
-    entries = []
+    entries = ['Doom','Doom_2','Halo:_Combat_Evolved','Halo_2','The_Elder_Scrolls_III:_Morrowind']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/Xbox360')
 def Xbox360():
-    entries = []
+    entries = ['Alien:_Isolation','Doom','Doom_2','Halo:_Combat_Evolved','Halo_2','Halo_3','Halo_Wars','The_Elder_Scrolls_V:_Skyrim','XCOM:_Enemy_Unknown']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/PS1')
 def PS1():
-    entries = []
+    entries = ['Doom','Doom_2','X-Com:_UFO_Defence']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/PS3')
 def PS4():
-    entries = []
+    entries = ['Alien:_Isolation','Doom','Doom_2','The_Elder_Scrolls_V:_Skyrim','XCOM:_Enemy_Unknown']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/GB')
 def GB():
-    entries = []
+    entries = ['Pokemon_Blue','Pokemon_Red']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Platform/GBA')
 def GBA():
-    entries = []
+    entries = ['Doom','Doom_2','Pokemon_Emerald','Sonic_The_Hedgehog','Super_Mario_World']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 

@@ -1,12 +1,16 @@
 <html>
 <head>
-    <title>The Game Zone </title>
+    <title>{{ game }} </title>
 </head>
 <body>
-    <h1>{{ game }}</h1>
+    <h1>The Game Zone<h1>
+    <h2>{{ game }}</h1>
     <ul>
-      {% for name in names %}
-       <li>{{ name }}</li>
+      {% for info in details %}
+       <li>Genre: {{ info.genre }}</li>
+       <li>Year: {{ info.year }}</li>
+       <li>Publisher: {{ info.pub }}</li>
+       <li>Platform: {{ info.plat }}</li>
       {% endfor %}
      </ul>
 </body>
