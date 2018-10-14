@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,10 +15,11 @@ def games():
 @app.route('/Games/Alien:_Isolation')
 def alien():
    game = 'Alien: Isolation'
+   image ='/static/img/alien.png style=width:300px;height400px;'
    details = []
    dict_details = dict(genre="FPS", year="2012", pub="Sega", plat="Windows, PS3, Xbox360, Linux, MacOS")
    details.append(dict_details)
-   return render_template('entry.html', game=game, details=details)
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Doom')
 def doom():
