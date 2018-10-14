@@ -8,7 +8,7 @@ def home():
 
 @app.route('/Games')
 def games():
-   entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)', 'Halo:_Combat_Evolved', 'Halo_2', 'Halo_3','Halo_Wars','Hearts_Of_Iron_IV','Pokemon_Blue','Pokemon_Emerald','Pokemon_Red','Stellaris', 'Sonic_The_Hedgehog', 'Sonic_&_Knuckles', 'Super_Mario_Bros.', 'Super_Mario_World','The_Elder_Scrolls_III:_Morrowind','The_Elder_Scrolls_V:_Skyrim','X-Com_UFO_Defencse','XCOM:_Enemy_Unknown'] 
+   entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)', 'Halo:_Combat_Evolved', 'Halo_2', 'Halo_3','Halo_Wars','Hearts_Of_Iron_IV','Pokemon_Blue','Pokemon_Emerald','Pokemon_Red','Stellaris', 'Sonic_The_Hedgehog', 'Sonic_&_Knuckles', 'Super_Mario_Bros.', 'Super_Mario_World','The_Elder_Scrolls_III:_Morrowind','The_Elder_Scrolls_V:_Skyrim','X-Com:_UFO_Defence','XCOM:_Enemy_Unknown'] 
    currentdirect='/Games/'
    return render_template('base.html', categories=entries, direct=currentdirect)
 
@@ -20,6 +20,165 @@ def alien():
    details.append(dict_details)
    return render_template('entry.html', game=game, details=details)
 
+@app.route('/Games/Doom')
+def doom():
+   game = 'Doom'
+   details = []
+   dict_details = dict(genre="FPS", year="1993", pub="id Software", plat="Windows, MS-DOS, Xbox360, Xbox, SNES, PS1, PS3, GBA")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Doom_2')
+def doom2():
+   game = 'Doom II'
+   details = []
+   dict_details = dict(genre="FPS", year="1993", pub="id Software", plat="Windows, MS-DOS, Xbox360, Xbox, MacOS, PS1, PS3, GBA")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Doom_(2016)')
+def doom2016():
+   game = 'Doom'
+   details = []
+   dict_details = dict(genre="FPS", year="2016", pub="Bethesda Softworks", plat="Windows")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Halo:_Combat_Evolved')
+def halo():
+   game = 'Halo: Combat Evolved'
+   details = []
+   dict_details = dict(genre="FPS", year="2001", pub="Microsoft Game Studios", plat="Xbox, Windows, MacOS, Xbox360")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Halo_2')
+def halo2():
+   game = 'Halo 2'
+   details = []
+   dict_details = dict(genre="FPS", year="2004", pub="Microsoft Game Studios", plat="Xbox, Windows, Xbox360")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Halo_3')
+def halo3():
+   game = 'Halo 3'
+   details = []
+   dict_details = dict(genre="FPS", year="2007", pub="Microsoft Game Studios", plat="Xbox360")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Halo_Wars')
+def halowars():
+   game = 'Halo Wars'
+   details = []
+   dict_details = dict(genre="Strategy", year="2009", pub="Microsoft Game Studios", plat="Windows, Xbox360")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Hearts_Of_Iron_IV')
+def hoi4():
+   game = 'Hearts Of Iron IV'
+   details = []
+   dict_details = dict(genre="Strategy", year="2016", pub="Paradox Interactive", plat="Windows, MacOS, Linux")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Pokemon_Blue')
+def pokemonb():
+   game = 'Pokemon Blue'
+   details = []
+   dict_details = dict(genre="RPG", year="1996", pub="Nintendo", plat="GB")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Pokemon_Red')
+def pokemonr():
+   game = 'Pokemon Red'
+   details = []
+   dict_details = dict(genre="RPG", year="1996", pub="Nintendo", plat="GB")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Pokemon_Emerald')
+def pokemone():
+   game = 'Pokemon Emerald'
+   details = []
+   dict_details = dict(genre="RPG", year="2004", pub="Nintendo", plat="GBA")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Stellaris')
+def stellaris():
+   game = 'Stellaris'
+   details = []
+   dict_details = dict(genre="Strategy", year="2016", pub="Paradox Interactive", plat="Windows, MacOS, Linux")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Sonic_The_Hedgehog')
+def sonic():
+   game = 'Sonic The Hedgehog'
+   details = []
+   dict_details = dict(genre="Platformer", year="1991", pub="Sega", plat="Megadrive, Windows, GBA")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Sonic_&_Knuckles')
+def knuckles():
+   game = 'Sonic & Knuckles'
+   details = []
+   dict_details = dict(genre="Platformer", year="1994", pub="Sega", plat="Megadrive, Windows")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Super_Mario_Bros.')
+def smb():
+   game = 'Super Mario Bros.'
+   details = []
+   dict_details = dict(genre="Platformer", year="1985", pub="Nintendo", plat="NES, SNES")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/Super_Mario_World')
+def smw():
+   game = 'Super Mario World'
+   details = []
+   dict_details = dict(genre="Platformer", year="1990", pub="Nintendo", plat="SNES, GBA")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/The_Elder_Scrolls_III:_Morrowind')
+def morrowind():
+   game = 'The Elder Scrolls III: Morrowind'
+   details = []
+   dict_details = dict(genre="RPG", year="2002", pub="Bethesda Softworks", plat="Xbox, Windows")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/The_Elder_Scrolls_V:_Skyrim')
+def skyrim():
+   game = 'The Elder Scrolls V: Skyrim'
+   details = []
+   dict_details = dict(genre="RPG", year="2011", pub="Bethesda Softworks", plat="Xbox360, Windows, PS3")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/X-Com:_UFO_Defence')
+def ufo():
+   game = 'X-Com: UFO Defence'
+   details = []
+   dict_details = dict(genre="Strategy", year="1994", pub="MircoProse", plat="MS-DOS, Windows, PS1")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
+
+@app.route('/Games/XCOM:_Enemy_Unknown')
+def xcom():
+   game = 'XCOM: Enemy Unknown'
+   details = []
+   dict_details = dict(genre="Strategy", year="2012", pub="2K Games", plat="MS-DOS, Windows, PS1")
+   details.append(dict_details)
+   return render_template('entry.html', game=game, details=details)
 
 @app.route('/Genre')
 def genre():
@@ -83,7 +242,7 @@ def y1993():
 
 @app.route('/Year/1994')
 def y1994():
-    entries = ['X-Com_UFO_Defence', 'Doom_2', 'Sonic_&_Knuckles']
+    entries = ['X-Com:_UFO_Defence', 'Doom_2', 'Sonic_&_Knuckles']
     nextdirect='/Games/'
     return render_template('base.html', categories= entries, direct=nextdirect)
 
