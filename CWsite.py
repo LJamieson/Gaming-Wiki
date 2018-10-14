@@ -28,7 +28,7 @@ def doom():
    details = []
    dict_details = dict(genre="FPS", year="1993", pub="id Software", plat="Windows, MS-DOS, Xbox360, Xbox, SNES, PS1, PS3, GBA")
    details.append(dict_details)
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Doom_2')
 def doom2():
@@ -37,7 +37,7 @@ def doom2():
    dict_details = dict(genre="FPS", year="1993", pub="id Software", plat="Windows, MS-DOS, Xbox360, Xbox, MacOS, PS1, PS3, GBA")
    details.append(dict_details)
    image ='/static/img/doom2.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Doom_(2016)')
 def doom2016():
@@ -46,7 +46,7 @@ def doom2016():
    dict_details = dict(genre="FPS", year="2016", pub="Bethesda Softworks", plat="Windows")
    details.append(dict_details)
    image ='/static/img/doom16.png style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
    
 @app.route('/Games/Halo:_Combat_Evolved')
 def halo():
@@ -55,7 +55,7 @@ def halo():
    dict_details = dict(genre="FPS", year="2001", pub="Microsoft Game Studios", plat="Xbox, Windows, MacOS, Xbox360")
    details.append(dict_details)
    image ='/static/img/haloce.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Halo_2')
 def halo2():
@@ -64,7 +64,7 @@ def halo2():
    dict_details = dict(genre="FPS", year="2004", pub="Microsoft Game Studios", plat="Xbox, Windows, Xbox360")
    details.append(dict_details)
    image ='/static/img/halo2.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Halo_3')
 def halo3():
@@ -73,7 +73,7 @@ def halo3():
    dict_details = dict(genre="FPS", year="2007", pub="Microsoft Game Studios", plat="Xbox360")
    details.append(dict_details)
    image ='/static/img/halo3.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Halo_Wars')
 def halowars():
@@ -82,7 +82,7 @@ def halowars():
    dict_details = dict(genre="Strategy", year="2009", pub="Microsoft Game Studios", plat="Windows, Xbox360")
    details.append(dict_details)
    image ='/static/img/halowars.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Hearts_Of_Iron_IV')
 def hoi4():
@@ -91,7 +91,7 @@ def hoi4():
    dict_details = dict(genre="Strategy", year="2016", pub="Paradox Interactive", plat="Windows, MacOS, Linux")
    details.append(dict_details)
    image ='/static/img/hoi4.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Pokemon_Blue')
 def pokemonb():
@@ -100,7 +100,7 @@ def pokemonb():
    dict_details = dict(genre="RPG", year="1996", pub="Nintendo", plat="GB")
    details.append(dict_details)
    image ='/static/img/pokemonblue.jpg style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Pokemon_Red')
 def pokemonr():
@@ -109,7 +109,7 @@ def pokemonr():
    dict_details = dict(genre="RPG", year="1996", pub="Nintendo", plat="GB")
    details.append(dict_details)
    image ='/static/img/pokemonred.jpg style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Pokemon_Emerald')
 def pokemone():
@@ -118,7 +118,7 @@ def pokemone():
    dict_details = dict(genre="RPG", year="2004", pub="Nintendo", plat="GBA")
    details.append(dict_details)
    image ='/static/img/pokemonemerald.jpg style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Stellaris')
 def stellaris():
@@ -127,7 +127,7 @@ def stellaris():
    dict_details = dict(genre="Strategy", year="2016", pub="Paradox Interactive", plat="Windows, MacOS, Linux")
    details.append(dict_details)
    image ='/static/img/stellaris.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Sonic_The_Hedgehog')
 def sonic():
@@ -136,7 +136,7 @@ def sonic():
    dict_details = dict(genre="Platformer", year="1991", pub="Sega", plat="Megadrive, Windows, GBA")
    details.append(dict_details)
    image ='/static/img/sonic.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Sonic_&_Knuckles')
 def knuckles():
@@ -145,7 +145,7 @@ def knuckles():
    dict_details = dict(genre="Platformer", year="1994", pub="Sega", plat="Megadrive, Windows")
    details.append(dict_details)
    image ='/static/img/knuckles.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Super_Mario_Bros.')
 def smb():
@@ -154,7 +154,7 @@ def smb():
    dict_details = dict(genre="Platformer", year="1985", pub="Nintendo", plat="NES, SNES")
    details.append(dict_details)
    image ='/static/img/smb.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/Super_Mario_World')
 def smw():
@@ -163,7 +163,7 @@ def smw():
    dict_details = dict(genre="Platformer", year="1990", pub="Nintendo", plat="SNES, GBA")
    details.append(dict_details)
    image ='/static/img/smw.jpg style=width:400px;height:300px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/The_Elder_Scrolls_III:_Morrowind')
 def morrowind():
@@ -172,7 +172,7 @@ def morrowind():
    dict_details = dict(genre="RPG", year="2002", pub="Bethesda Softworks", plat="Xbox, Windows")
    details.append(dict_details)
    image ='/static/img/morrowind.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/The_Elder_Scrolls_V:_Skyrim')
 def skyrim():
@@ -181,7 +181,7 @@ def skyrim():
    dict_details = dict(genre="RPG", year="2011", pub="Bethesda Softworks", plat="Xbox360, Windows, PS3")
    details.append(dict_details)
    image ='/static/img/skyrim.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/X-Com:_UFO_Defence')
 def ufo():
@@ -190,7 +190,7 @@ def ufo():
    dict_details = dict(genre="Strategy", year="1994", pub="MircoProse", plat="MS-DOS, Windows, PS1")
    details.append(dict_details)
    image ='/static/img/xcomufo.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Games/XCOM:_Enemy_Unknown')
 def xcom():
@@ -199,7 +199,7 @@ def xcom():
    dict_details = dict(genre="Strategy", year="2012", pub="2K Games", plat="MS-DOS, Windows, PS1")
    details.append(dict_details)
    image ='/static/img/xcomenemy.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image))
+   return render_template('entry.html', game=game, details=details, image=image)
 
 @app.route('/Genre')
 def genre():
@@ -221,7 +221,7 @@ def platformer():
 
 @app.route('/Genre/Strategy')
 def strategy():
-    entries = ['Halo_Wars','Hearts_Of_Iron_IV', 'Stellaris', 'X-Com_UFO_Defense', 'XCOM:_Enemy_Unknown']
+    entries = ['Halo_Wars','Hearts_Of_Iron_IV', 'Stellaris', 'X-Com:_UFO_Defence', 'XCOM:_Enemy_Unknown']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
@@ -269,7 +269,7 @@ def y1994():
 
 @app.route('/Year/1996')
 def y1996():
-    entries = ['Pokemon_Red, Pokemon_Blue']
+    entries = ['Pokemon_Red', 'Pokemon_Blue']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
@@ -335,19 +335,19 @@ def publisher():
 
 @app.route('/Publisher/2K_Games')
 def TwoKGames():
-    entries = ['XCOM: Enemy Unknown']
+    entries = ['XCOM:_Enemy_Unknown']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Publisher/Bethesda_Softworks')
 def Bethesda():
-    entries = ['The Elder Scrolls III: Morrowind', 'The Elder Scrolls V: Skyrim', 'Doom (2016)']
+    entries = ['The_Elder_Scrolls_III:_Morrowind', 'The_Elder_Scrolls_V:_Skyrim', 'Doom_(2016)']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
 @app.route('/Publisher/id_Software')
 def idSoftware():
-    entries = ['Doom', 'Doom 2']
+    entries = ['Doom', 'Doom_2']
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
@@ -357,7 +357,7 @@ def mircoprose():
     nextdirect='/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
 
-@app.route('/Publisher/Mircosoft_Game_Studios')
+@app.route('/Publisher/Microsoft_Game_Studios')
 def mircosoft():
     entries = ['Halo:_Combat_Evolved', 'Halo_2', 'Halo_3', 'Halo_Wars']
     nextdirect='/Games/'
