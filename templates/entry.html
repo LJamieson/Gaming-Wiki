@@ -1,18 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>{{ game }} </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Games List site {{ game }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>The Game Zone<h1>
-    <h2>{{ game }}</h1>
-   <img src={{ image}}/> 
-    <ul>
-      {% for info in details %}
-       <li>Genre: {{ info.genre }}</li>
-       <li>Year: {{ info.year }}</li>
-       <li>Publisher: {{ info.pub }}</li>
-       <li>Platform: {{ info.plat }}</li>
-      {% endfor %}
-     </ul>
-</body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                        The Game Zone Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/Genre">Genre</a>
+                </li>
+                <li>
+                    <a href="/Platform">Platform</a>
+                </li>
+                <li>
+                    <a href="/Publisher">Publisher</a>
+                </li>
+                <li>
+                    <a href="/Year">Year</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>The Game Zone<h1>
+                <h2>{{ game }}</h1>
+                <img src={{ image}}/> 
+                <ul>
+                    {% for info in details %}
+                        <li>Genre: {{ info.genre }}</li>
+                        <li>Year: {{ info.year }}</li>
+                        <li>Publisher: {{ info.pub }}</li>
+                        <li>Platform: {{ info.plat }}</li>
+                    {% endfor %}
+                </ul>
+                
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Open Menu</a>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
 </html>
