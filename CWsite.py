@@ -70,10 +70,11 @@ def halo2():
 def halo3():
    game = 'Halo 3'
    details = []
+   video ='https://www.youtube.com/embed/9z36WDj2PcU'
    dict_details = dict(genre="FPS", year="2007", pub="Microsoft Game Studios", plat="Xbox360")
    details.append(dict_details)
    image ='/static/img/halo3.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Halo_Wars')
 def halowars():
