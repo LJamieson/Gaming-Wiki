@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, redirect, request, url_for
 app = Flask(__name__)
 
 @app.route('/')
@@ -464,6 +464,23 @@ def GBA():
     entries = ['Doom','Doom_2','Pokemon_Emerald','Sonic_The_Hedgehog','Super_Mario_World']
     nextdirect = '/Games/'
     return render_template('base.html', categories=entries, direct=nextdirect)
+
+@app.route('/contact', methods=['POST','GET'])
+def contact():
+    if request.method == 'POST':
+       Rname = request.form['Cname']
+       Rfile = request.files['datafile']
+       if Rfile is not None:
+           Rfile.save('static/uploads/' + Rname +'.png')
+       Rmessage = request.form['message']
+       if Rmessage is not None:
+          with open('static/uploads/' + Rname + '.txt',"w+") as openedtext:
+             openedtext.write(str(Rmessage))
+        
+       return render_template('contact.html')
+    else:
+       return render_template('contact.html')
+
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', debug=True)
