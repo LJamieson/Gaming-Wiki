@@ -56,13 +56,12 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <h1>The Game Zone</h1>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Open Menu</a>
                 <ul>
                     {% for category in categories %}
                         <li><a href={{direct}}{{category}} >{{ category }}</a></li>
                     {% endfor %}
                 </ul>
-                
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Open Menu</a>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
