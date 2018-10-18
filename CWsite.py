@@ -16,55 +16,61 @@ def games():
 def alien():
    game = 'Alien: Isolation'
    image ='/static/img/alien.png style=width:300px;height:400px;'
+   video = 'https://www.youtube.com/embed/7h0cgmvIrZw'
    details = []
    dict_details = dict(genre="FPS", year="2012", pub="Sega", plat="Windows, PS3, Xbox360, Linux, MacOS")
    details.append(dict_details)
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Doom')
 def doom():
    game = 'Doom'
    image ='/static/img/doom.jpg style=width:300px;height:400px;'
+   video = 'https://www.youtube.com/embed/jP2jI0BVG0w'
    details = []
    dict_details = dict(genre="FPS", year="1993", pub="id Software", plat="Windows, MS-DOS, Xbox360, Xbox, SNES, PS1, PS3, GBA")
    details.append(dict_details)
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Doom_2')
 def doom2():
    game = 'Doom II'
+   video ='https://www.youtube.com/embed/p-KIS4Sk76c'
    details = []
    dict_details = dict(genre="FPS", year="1993", pub="id Software", plat="Windows, MS-DOS, Xbox360, Xbox, MacOS, PS1, PS3, GBA")
    details.append(dict_details)
    image ='/static/img/doom2.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Doom_(2016)')
 def doom2016():
    game = 'Doom'
+   video = 'https://www.youtube.com/embed/RO90omga8D4'
    details = []
    dict_details = dict(genre="FPS", year="2016", pub="Bethesda Softworks", plat="Windows")
    details.append(dict_details)
    image ='/static/img/doom16.png style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
    
 @app.route('/Games/Halo:_Combat_Evolved')
 def halo():
    game = 'Halo: Combat Evolved'
+   video = 'https://www.youtube.com/embed/9sXgl3Omfw8'
    details = []
    dict_details = dict(genre="FPS", year="2001", pub="Microsoft Game Studios", plat="Xbox, Windows, MacOS, Xbox360")
    details.append(dict_details)
    image ='/static/img/haloce.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Halo_2')
 def halo2():
    game = 'Halo 2'
+   video='https://www.youtube.com/embed/Zz6FNKawJBc'
    details = []
    dict_details = dict(genre="FPS", year="2004", pub="Microsoft Game Studios", plat="Xbox, Windows, Xbox360")
    details.append(dict_details)
    image ='/static/img/halo2.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Halo_3')
 def halo3():
@@ -79,128 +85,142 @@ def halo3():
 @app.route('/Games/Halo_Wars')
 def halowars():
    game = 'Halo Wars'
+   video ='https://www.youtube.com/embed/l785cqiTPpw'
    details = []
    dict_details = dict(genre="Strategy", year="2009", pub="Microsoft Game Studios", plat="Windows, Xbox360")
    details.append(dict_details)
    image ='/static/img/halowars.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Hearts_Of_Iron_IV')
 def hoi4():
    game = 'Hearts Of Iron IV'
+   video ='https://www.youtube.com/embed/e9BiUtINy4w'
    details = []
    dict_details = dict(genre="Strategy", year="2016", pub="Paradox Interactive", plat="Windows, MacOS, Linux")
    details.append(dict_details)
    image ='/static/img/hoi4.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Pokemon_Blue')
 def pokemonb():
    game = 'Pokemon Blue'
+   video ='https://www.youtube.com/embed/WP4R-wVeT9s'
    details = []
    dict_details = dict(genre="RPG", year="1996", pub="Nintendo", plat="GB")
    details.append(dict_details)
    image ='/static/img/pokemonblue.jpg style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image, video=video)
 
 @app.route('/Games/Pokemon_Red')
 def pokemonr():
    game = 'Pokemon Red'
+   video = 'https://www.youtube.com/embed/WP4R-wVeT9s'
    details = []
    dict_details = dict(genre="RPG", year="1996", pub="Nintendo", plat="GB")
    details.append(dict_details)
    image ='/static/img/pokemonred.jpg style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Pokemon_Emerald')
 def pokemone():
    game = 'Pokemon Emerald'
+   video ='https://www.youtube.com/embed/KInoJimjJzI'
    details = []
    dict_details = dict(genre="RPG", year="2004", pub="Nintendo", plat="GBA")
    details.append(dict_details)
    image ='/static/img/pokemonemerald.jpg style=width:350px;height:350px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Stellaris')
 def stellaris():
    game = 'Stellaris'
+   video ='https://www.youtube.com/embed/KanCiSGxSKM'
    details = []
    dict_details = dict(genre="Strategy", year="2016", pub="Paradox Interactive", plat="Windows, MacOS, Linux")
    details.append(dict_details)
    image ='/static/img/stellaris.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Sonic_The_Hedgehog')
 def sonic():
    game = 'Sonic The Hedgehog'
+   video ='https://www.youtube.com/embed/mK0OFsWWzu4'
    details = []
    dict_details = dict(genre="Platformer", year="1991", pub="Sega", plat="Megadrive, Windows, GBA")
    details.append(dict_details)
    image ='/static/img/sonic.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Sonic_&_Knuckles')
 def knuckles():
    game = 'Sonic & Knuckles'
+   video ='https://www.youtube.com/embed/8pLqpfwedGc'
    details = []
    dict_details = dict(genre="Platformer", year="1994", pub="Sega", plat="Megadrive, Windows")
    details.append(dict_details)
    image ='/static/img/knuckles.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Super_Mario_Bros.')
 def smb():
    game = 'Super Mario Bros.'
+   video ='https://www.youtube.com/embed/zD2CLUFGPqI'
    details = []
    dict_details = dict(genre="Platformer", year="1985", pub="Nintendo", plat="NES, SNES")
    details.append(dict_details)
    image ='/static/img/smb.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/Super_Mario_World')
 def smw():
    game = 'Super Mario World'
+   video ='https://www.youtube.com/embed/3RPYcfgKsNI?start=5'
    details = []
    dict_details = dict(genre="Platformer", year="1990", pub="Nintendo", plat="SNES, GBA")
    details.append(dict_details)
    image ='/static/img/smw.jpg style=width:400px;height:300px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/The_Elder_Scrolls_III:_Morrowind')
 def morrowind():
    game = 'The Elder Scrolls III: Morrowind'
+   video ='https://www.youtube.com/embed/Cr3TCWPlDrw'
    details = []
    dict_details = dict(genre="RPG", year="2002", pub="Bethesda Softworks", plat="Xbox, Windows")
    details.append(dict_details)
    image ='/static/img/morrowind.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/The_Elder_Scrolls_V:_Skyrim')
 def skyrim():
    game = 'The Elder Scrolls V: Skyrim'
+   video ='https://www.youtube.com/embed/JSRtYpNRoN0'
    details = []
    dict_details = dict(genre="RPG", year="2011", pub="Bethesda Softworks", plat="Xbox360, Windows, PS3")
    details.append(dict_details)
    image ='/static/img/skyrim.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/X-Com:_UFO_Defence')
 def ufo():
    game = 'X-Com: UFO Defence'
+   video ='https://www.youtube.com/embed/RpvGs7-X1X4'
    details = []
    dict_details = dict(genre="Strategy", year="1994", pub="MircoProse", plat="MS-DOS, Windows, PS1")
    details.append(dict_details)
    image ='/static/img/xcomufo.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Games/XCOM:_Enemy_Unknown')
 def xcom():
    game = 'XCOM: Enemy Unknown'
+   video ='https://www.youtube.com/embed/kJLFNYhq1YM'
    details = []
    dict_details = dict(genre="Strategy", year="2012", pub="2K Games", plat="MS-DOS, Windows, PS1")
    details.append(dict_details)
    image ='/static/img/xcomenemy.jpg style=width:300px;height:400px;'
-   return render_template('entry.html', game=game, details=details, image=image)
+   return render_template('entry.html', game=game, details=details, image=image,video=video)
 
 @app.route('/Genre')
 def genre():
