@@ -6,6 +6,10 @@ def home():
    categories = ['Genre', 'Platform', 'Publisher', 'Year', 'Games']
    return render_template('base.html', categories=categories)
 
+@app.errorhandler(404)
+def page_not_found(error):
+   return render_template('error.html'), 404
+
 @app.route('/Games')
 def games():
    entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)', 'Halo:_Combat_Evolved', 'Halo_2', 'Halo_3','Halo_Wars','Hearts_Of_Iron_IV','Pokemon_Blue','Pokemon_Emerald','Pokemon_Red','Stellaris', 'Sonic_The_Hedgehog', 'Sonic_&_Knuckles', 'Super_Mario_Bros.', 'Super_Mario_World','The_Elder_Scrolls_III:_Morrowind','The_Elder_Scrolls_V:_Skyrim','X-Com:_UFO_Defence','XCOM:_Enemy_Unknown'] 
