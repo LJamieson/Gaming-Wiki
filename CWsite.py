@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
    categories = ['Genre', 'Platform', 'Publisher', 'Year', 'Games']
-   return render_template('base.html', categories=categories)
+   return render_template('home.html', categories=categories)
 
 @app.errorhandler(404)
 def page_not_found(error):
