@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
    categories = ['Genre', 'Platform', 'Publisher', 'Year', 'Games']
-   info= 'Welcome to The Game Zone. \n\nWith this site you can look for games using these categories here and the menu button'
+   info= 'Welcome to The Game Zone. With this site you can look for games using these categories here and the menu button'
    return render_template('base.html', categories=categories,info=info)
 
 @app.errorhandler(404)
@@ -15,7 +15,8 @@ def page_not_found(error):
 def games():
    entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)', 'Halo:_Combat_Evolved', 'Halo_2', 'Halo_3','Halo_Wars','Hearts_Of_Iron_IV','Pokemon_Blue','Pokemon_Emerald','Pokemon_Red','Stellaris', 'Sonic_The_Hedgehog', 'Sonic_&_Knuckles', 'Super_Mario_Bros.', 'Super_Mario_World','The_Elder_Scrolls_III:_Morrowind','The_Elder_Scrolls_V:_Skyrim','X-Com:_UFO_Defence','XCOM:_Enemy_Unknown'] 
    currentdirect='/Games/'
-   return render_template('base.html', categories=entries, direct=currentdirect)
+   info='This is a list of all of the games on this website. If your favourite game is missing please use the contact page.'
+   return render_template('base.html', categories=entries, direct=currentdirect, info=info)
 
 @app.route('/Games/Alien:_Isolation')
 def alien():
@@ -237,25 +238,29 @@ def genre():
 def fps():
    entries = ['Alien:_Isolation', 'Doom', 'Doom_2', 'Doom_(2016)','Halo:_Combat_Evolved', 'Halo_2', 'Halo_3']
    nextdirect='/Games/'
-   return render_template('base.html', categories=entries, direct=nextdirect)
+   info='FPS or first person shooters are games where the player shoots and interacts with the world from a first person perspective.'
+   return render_template('base.html', categories=entries, direct=nextdirect, info=info)
 
 @app.route('/Genre/Platformer')
 def platformer():
     entries = ['Sonic_The_Hedgehog', 'Sonic_&_Knuckles', 'Super_Mario_Bros.', 'Super_Mario_World']
     nextdirect='/Games/'
-    return render_template('base.html', categories=entries, direct=nextdirect)
+    info='Platformers are games where the player controls a character through a level, avoiding obstacles, getting collectables and getting to the end of the level.' 
+    return render_template('base.html', categories=entries, direct=nextdirect, info=info)
 
 @app.route('/Genre/Strategy')
 def strategy():
     entries = ['Halo_Wars','Hearts_Of_Iron_IV', 'Stellaris', 'X-Com:_UFO_Defence', 'XCOM:_Enemy_Unknown']
     nextdirect='/Games/'
-    return render_template('base.html', categories=entries, direct=nextdirect)
+    info='Strategy games are where the player controls units, plan out tactics to overcome issues and carefully manage resources.'  
+    return render_template('base.html', categories=entries, direct=nextdirect, info=info)
 
 @app.route('/Genre/RPG')
 def rpg():
     entries = ['Pokemon_Red', 'Pokemon_Blue', 'Pokemon_Emerald', 'The_Elder_Scrolls_III:_Morrowind', 'The_Elder_Scrolls_V:_Skyrim']
     nextdirect='/Games/'
-    return render_template('base.html', categories= entries, direct=nextdirect)
+    info='RPGs or roleplaying games are where the player plays the role of a character in a world, level up by gaining experience points and managing their stats.'
+    return render_template('base.html', categories= entries, direct=nextdirect, info=info)
 
 @app.route('/Year')
 def year():
