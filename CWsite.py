@@ -4,7 +4,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
    categories = ['Genre', 'Platform', 'Publisher', 'Year', 'Games']
-   return render_template('home.html', categories=categories)
+   info= 'Welcome to The Game Zone \nWith this site you can look for games using these categories here and the menu button'
+   return render_template('base.html', categories=categories,info=info)
 
 @app.errorhandler(404)
 def page_not_found(error):
