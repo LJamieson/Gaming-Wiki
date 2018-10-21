@@ -4,7 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
    categories = ['Genre', 'Platform', 'Publisher', 'Year', 'Games']
-   info= 'Welcome to The Game Zone \nWith this site you can look for games using these categories here and the menu button'
+   info= 'Welcome to The Game Zone. \n\nWith this site you can look for games using these categories here and the menu button'
    return render_template('base.html', categories=categories,info=info)
 
 @app.errorhandler(404)
